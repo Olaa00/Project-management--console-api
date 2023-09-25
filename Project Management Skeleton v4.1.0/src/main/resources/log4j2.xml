@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%-5level] %class{36} :: %M:%L - %msg%xEx%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Logger name ="pl.ttpsc.javaupdate.project.action" level="debug" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <Logger name = "pl.ttpsc.javaupdate.project.connection.DatabaseConnector" level = "debug" additivity = "false">
+            <AppenderRef ref = "Console" />
+        </Logger>
+
+        <Logger name = "pl.ttpsc.javaupdate.project.persistence.sql.SqlPersistenceManager" level = "debug" additivity = "false">
+            <AppenderRef ref = "Console" />
+        </Logger>
+
+        <Logger name ="Security" level="trace" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
